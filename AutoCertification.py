@@ -1,10 +1,10 @@
 import discord
 import asyncio
 import openpyxl
+import os
 
 client = discord.Client()
 channelid = '662180169221668894'
-token = "NjY1NDk3MjY2ODg2Mjc5MTc5.Xh2oFw.TSOIioqn0203DniojtZQQbJGiQY"
 servername = "METEOR"
 @client.event
 async def on_ready():
@@ -150,5 +150,5 @@ async def on_ready():
                 return None
         else:
             return None
-
-client.run(token)
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
